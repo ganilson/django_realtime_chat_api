@@ -51,7 +51,7 @@ ASGI_APPLICATION = 'config.asgi.application'
     
 # }
 
-#For PRODUCTION!!
+#For PRODUCTION
 CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
