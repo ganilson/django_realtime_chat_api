@@ -23,9 +23,9 @@ SECRET_KEY = 'Ganilson123'
 import datetime
 JWT_EXPIRATION_DELTA = datetime.timedelta(hours=1) 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 # Application definition
 
@@ -56,6 +56,7 @@ CHANNEL_LAYERS = {
     'default': {
         'BACKEND': 'channels_redis.core.RedisChannelLayer',
         'CONFIG': {
+            # "hosts": [('127.0.0.1', 6379)],  # URL do Redis
             "hosts": [('127.0.0.1', 6379)],  # URL do Redis
         },
     },

@@ -10,6 +10,9 @@ from app.urls import websocket_urlpatterns
 import django
 django.setup()
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'config.settings')
+
+
+
 applicationServer = ProtocolTypeRouter({
     "http": get_asgi_application(),
     "websocket": AuthMiddlewareStack(
@@ -22,4 +25,3 @@ application = JWTAuthMiddleware(
     inner=applicationServer,
     protected_paths=["/app/"]
 )
-

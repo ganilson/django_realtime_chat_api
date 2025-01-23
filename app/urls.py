@@ -17,5 +17,6 @@ websocket_urlpatterns = [
     path("app/notificacao/", JWTAuthMiddleware(Notifications.as_asgi())),
     path("app/mensagens/<int:senderId>/<int:receiverId>/", JWTAuthMiddleware(Messages.as_asgi())),
     path("app/notificacao/", JWTAuthMiddleware(Notifications.as_asgi())),
+    path("app/listener/", JWTAuthMiddleware(Notifications.as_asgi())),
     # Adicione mais rotas WebSocket aqui...
 ]

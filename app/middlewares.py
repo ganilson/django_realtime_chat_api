@@ -98,7 +98,7 @@ class JWTAuthMiddleware(BaseMiddleware):
                 'text': response_body.decode('utf-8'),
             })
         else:
- 
+
             raise ValueError("Tipo de conexão desconhecido: {}".format(scope['type']))
         
 from django.utils.deprecation import MiddlewareMixin
